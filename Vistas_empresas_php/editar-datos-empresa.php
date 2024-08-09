@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" media="(min-width: 800px)" href="./editar-datos-empresa.css" />
+  <link rel="stylesheet" media="(min-width: 800px)" href="../Vistas-Empresas/editar-datos-empresa.css" />
   <title>Editar datos de la empresa</title>
 </head>
 
