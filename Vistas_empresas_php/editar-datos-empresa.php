@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" media="(min-width: 800px)" href="../Vistas-Empresas/editar-datos-empresa.css" />
+  <link rel="stylesheet" href="../Vistas-Empresas/editar-datos-empresa.css" />
   <title>Editar datos de la empresa</title>
 </head>
 
@@ -56,7 +56,7 @@
             </div>
             <!--Fin del area de la imagen-->
             <!--Inicio del campo editar imagen-->
-             <div class="tamaño">
+             <div class="tamano">
             <li><img src="../assets/icons/editar-n.svg"></li>
             <li><a class="editar" href="#">Editar/Cambiar foto</a></li>
           </div>
@@ -219,4 +219,3 @@
     </aside>
 </body>
 </html>
-
