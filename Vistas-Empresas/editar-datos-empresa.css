@@ -594,6 +594,7 @@ main {
   position: relative;
   left: 15px;
   top: -90px;
+  width: calc(100% - 44px);
   padding: 10px 10px 20px;
   font-family: 'Poppins-Regular', 'Poppins', sans-serif;
   font-weight: 400;
@@ -616,6 +617,7 @@ main {
   position: relative;
   top: -60px;
   left: 25px;
+  width: calc(100% - 44px);
   background-color: rgba(255, 255, 255, 0);
   box-sizing: border-box;
   font-family: 'Poppins Regular', 'Poppins', sans-serif;
@@ -649,8 +651,9 @@ hr.line-title3 {
 }
 
 .content2--description-text {
+  resize: none;
   position: relative;
-  width: 900px;
+  width: calc(100% - 92px);
   height: 108px;
   border-radius: 4px;
   border: 1px solid #071e33;
