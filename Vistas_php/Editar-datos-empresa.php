@@ -1,28 +1,73 @@
 <?php
-    //Datos de la empresa
-    $nombre_empresa="";
-    $correo_electronico_empresa="";
-    $telefono_empresa="";
-    $ubicacion_empresa="";
-    
-    //Datos del contacto
-    $contacto_directo="";
-    $area_contacto="";
-    $telefono_contacto="";
-    $correo_electronico_contacto="";
 
-    //Descripción de la empresa
-    $descripcion_empresa="";
+    //Conexión a la BD
+    require "BD.php";
+    $conexion= new Conexion;
 
-    //Datos adicionales
-    $calle="";
-    $colonia="";
-    $numero="";
-    $codigo_postal="";
-    $ciudad="";
-    $estado="";
-    $rfc="";
-    $pagina_web="";
+    $id="";
+
+    if($_GET){
+        $id=$_GET['id'];
+        $sql="SELECT * FROM persona WHERE id=".$id;
+        $listOne=$conexion->ejecutar($sql);
+        $resultado=$listOne->fetchALL();
+        //Datos de la empresa
+        $nombre_empresa=$resultado[0]['nombre_empresa'];
+        $email_empresa=$resultado[0]['email_empresa'];
+        $telefono_empresa=$resultado[0]['telefono_empresa'];
+        $ubicacion_empresa=$resultado[0]['ubicacion_empresa'];
+        
+        //Datos del contacto
+        $contacto_directo=$resultado[0]['contacto_directo'];
+        $area_contacto=$resultado[0]['area_contacto'];
+        $telefono_contacto=$resultado[0]['telefono_contacto'];
+        $emai_contacto=$resultado[0]['emai_contacto'];
+
+        //Descripción de la empresa
+        $descripcion_empresa=$resultado[0]['descripcion_empresa'];
+
+        //Datos adicionales
+        $calle=$resultado[0]['calle'];
+        $colonia=$resultado[0]['colonia'];
+        $numero=$resultado[0]['numero'];
+        $codigo_postal=$resultado[0]['codigo_postal'];
+        $ciudad=$resultado[0]['ciudad'];
+        $estado=$resultado[0]['estado'];
+        $rfc=$resultado[0]['$rfc'];
+        $pagina_web=$resultado[0]['pagina_web'];
+    }
+    if($_POST){
+        $id=(isset($_POST['id'])) ? $_POST['id']:"";
+        //Datos de la empresa
+        $nombre_empresa=(isset($_POST['nombre_empresa'])) ? $_POST['nombre_empresa']:"";
+        $email_empresa=(isset($_POST['email_empresa'])) ? $_POST['email_empresa']:"";
+        $telefono_empresa=(isset($_POST['telefono_empresa'])) ? $_POST['telefono_empresa']:"";
+        $ubicacion_empresa=(isset($_POST['ubicacion_empresa'])) ? $_POST['ubicacion_empresa']:"";
+        
+        //Datos del contacto
+        $contacto_directo=(isset($_POST['contacto_directo'])) ? $_POST['contacto_directo']:"";
+        $area_contacto=(isset($_POST['area_contacto'])) ? $_POST['area_contacto']:"";
+        $telefono_contacto=(isset($_POST['telefono_contacto'])) ? $_POST['telefono_contacto']:"";
+        $emai_contacto=(isset($_POST['email_contacto'])) ? $_POST['email_contacto']:"";
+
+        //Descripción de la empresa
+        $descripcion_empresa=(isset($_POST['descripcion_empresa'])) ? $_POST['descripcion_empresa']:"";
+
+        //Datos adicionales
+        $calle=(isset($_POST['calle'])) ? $_POST['calle']:"";
+        $colonia=(isset($_POST['colonia'])) ? $_POST['colonia']:"";
+        $numero=(isset($_POST['numero'])) ? $_POST['numero']:"";
+        $codigo_postal=(isset($_POST['codigo_postal'])) ? $_POST['codigo_postal']:"";
+        $ciudad=(isset($_POST['ciudad'])) ? $_POST['ciudad']:"";
+        $estado=(isset($_POST['estado'])) ? $_POST['estado']:"";
+        $rfc=(isset($_POST['rfc'])) ? $_POST['rfc']:"";
+        $pagina_web=(isset($_POST['pagina_web'])) ? $_POST['pagina_web']:"";
+        
+        //Actualizar
+        $sql="UPDATE persona SET nombre='".$nombre."', apellidos='".$apellidos."' WHERE id=".$id;
+        $agregar=$conexion->ejecutar($sql);
+        echo "<div>Se ha actualizado correctamente a: <strong>".$nombre." ".$apellidos."</strong></div>";
+    }
 ?>
 
 <!DOCTYPE html>
