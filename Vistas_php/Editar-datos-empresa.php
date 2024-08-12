@@ -23,13 +23,11 @@
     </header>
 <center>
 <!--Inicio del menu-->
-<div>
-  <ul class="menu">
-  <li ><a class="texto-menu" href="Datos-de-la-empresa.html">Datos de la Empresa</a></li>
-  <li class="icon"><img src="../assets/icons/u18.svg" class="icon--settings"></li>
-  <li class=" icon">  <img src="../assets/icons/u11.svg" class="icon--question"></li>
-  <li class="icon"><img src="../assets/img/u462.PNG" class="icon--profile"></li>
-  </ul>
+<div class="div-menu">
+    <div class="div-texto-menu"><a class="texto-menu" href="Datos-de-la-empresa.html">Datos de la Empresa</a></div>
+    <div class="div-icon"><img src="../assets/icons/u18.svg" class="icon--question"></div>
+    <div class="div-icon"><img src="../assets/icons/u11.svg" class="icon--settings"></div>
+    <div class="div-icon"><img src="../assets/img/u462.png" class="icon--profile"></div>
 </div>
 <!--Fin del menu-->
 </center>
