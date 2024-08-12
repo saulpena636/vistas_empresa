@@ -85,7 +85,7 @@
                   </div>
 
                     <div class="dir">
-                        <label for="#"class="content2--information-text3">Numero:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Numero de la empresa..."></label>
+                        <label for="#"class="content2--information-text3">Número:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Numero de la empresa..."></label>
 
                         <label for="#" class="content2--information-text3">C.P.:<input  class="celdas2"  type="text" name="company" placeholder="     Codigo Postal de la empresa..." ></label>
                         <br>
@@ -102,7 +102,7 @@
                 <hr class="line-title3">
               </div>
                     <div class="dir">
-                        <label for="#"class="content2--information-text3">Pagina web:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Pagina web de la empresa..."></label>
+                        <label for="#"class="content2--information-text3">Página web:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Pagina web de la empresa..."></label>
 
                         <label for="#" class="content2--information-text3">RFC:<input  class="celdas2"  type="text" name="company" placeholder="     RFC de la empresa..." ></label>
                   </div>
