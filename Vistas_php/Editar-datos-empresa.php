@@ -1,3 +1,30 @@
+<?php
+    //Datos de la empresa
+    $nombre_empresa="";
+    $correo_electronico_empresa="";
+    $telefono_empresa="";
+    $ubicacion_empresa="";
+    
+    //Datos del contacto
+    $contacto_directo="";
+    $area_contacto="";
+    $telefono_contacto="";
+    $correo_electronico_contacto="";
+
+    //Descripción de la empresa
+    $descripcion_empresa="";
+
+    //Datos adicionales
+    $calle="";
+    $colonia="";
+    $numero="";
+    $codigo_postal="";
+    $ciudad="";
+    $estado="";
+    $rfc="";
+    $pagina_web="";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
