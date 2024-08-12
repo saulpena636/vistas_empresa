@@ -99,6 +99,10 @@ main {
   height: calc(100% - 114px);
 }
 
+.cont{
+  width: 100%;
+}
+
 .main--section {
   position: relative;
   display: flex;
@@ -649,6 +653,7 @@ hr.line-title3 {
   height: 1px;
   background-color: #797979;
 }
+
 
 .content2--description-text {
   resize: none;

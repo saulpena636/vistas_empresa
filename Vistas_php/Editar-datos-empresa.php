@@ -116,10 +116,10 @@
         <hr class="line-title1">
         </div>
      <!--fin de la linea de separacion--> 
-     <form action="Editar-datos-empresa.php" method="post">
-         <div class="main--content">
+     <form action="Editar-datos-empresa.php" class="main--content" method="post">
+         <div class="cont">
            <div class="content2">
-          <!--Inicio de la segunda seccion-->
+            <!--Inicio de la segunda seccion-->
             <div class="content2--information">
              <!--Inicio del area de la imagen-->
              <div class="content1--img">
@@ -271,7 +271,7 @@
         </div>
         <div class="modal--container-buttons">
            <a href="Datos-de-la-empresa.html" class="modal-button2"> <span class="modal-button1-text">Cerrar</span></a>
-         <a href="#modal2" class="modal-button1"> <span class="modal-button1-text">Guardar</span></a>
+         <a href="#modal2" class="modal-button1"> <button type="submit" class="modal-button1-text">Guardar</button></a>
 
         </div>
       </div>
