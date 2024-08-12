@@ -176,7 +176,7 @@
       </div>
       </div>
     </footer>
-        <!-- <aside id="modal" class="modal--container">
+        <aside id="modal" class="modal--container">
       <div class="content-modal">
         <div class="modal--title">
           <p>Mensaje</p>
@@ -203,6 +203,6 @@
          <a href="Datos-de-la-empresa.html" class="modal-button3"> <span class="modal-button1-text">Cerrar</span></a>
         </div>
       </div>
-    </aside> -->
+    </aside>
 </body>
 </html>
