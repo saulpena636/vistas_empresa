@@ -7,7 +7,7 @@
 
         public function __construct(){
             try {
-                $this->conexion = new PDO("mysql:host=$this->servidor; dbname=ejercicio1", $this->usuario, $this->contrasena);
+                $this->conexion = new PDO("mysql:host=$this->servidor; dbname=pruebas_vistas", $this->usuario, $this->contrasena);
                 $this->conexion -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $error) {
                 return "Error al conectar con la base de datos.".$error;
