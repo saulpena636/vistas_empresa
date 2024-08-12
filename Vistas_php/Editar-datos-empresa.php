@@ -1,7 +1,7 @@
 <?php
 
     //Conexión a la BD
-    require "BD.php";
+    require "../BD.php";
     $conexion= new Conexion;
 
     $id="";
@@ -115,106 +115,108 @@
         <div>
         <hr class="line-title1">
         </div>
-     <!--fin de la linea de separacion-->
-        <div class="main--content">
-          <div class="content2">
-         <!--Inicio de la segunda seccion-->
-           <div class="content2--information">
-            <!--Inicio del area de la imagen-->
-            <div class="content1--img">
-              <img src="../assets/img/cemex.png" class="img--enterprise" alt="" />
-            </div>
-            <!--Fin del area de la imagen-->
-            <!--Inicio del campo editar imagen-->
-             <div class="tamano">
-            <li><img src="../assets/icons/editar-n.svg"></li>
-            <li><a class="editar" href="#">Editar/Cambiar foto</a></li>
-          </div>
-            <!--Fin del campo editar imagen-->
-              <div class="content2--information-title1">
-                <p>Datos de la empresa</p>
-
-                  <hr class="line-title2">
-               </div>
-              <div class="contact">
-              <diV class="content2--information-text1">
-                <p>Nombre de la empresa  <input type="text" class="content2--information-texto1" name="nombre" placeholder=" CEMEX"></p>
-                <p>Correo electronico <input type="text" class="content2--information-texto1" name="correo" placeholder=" cemex@cemex.com.mx" ></p>
-                <p>Telefono <input type="text" class="content2--information-texto1" name="telefono" placeholder=" 442 3091600" ></p>
-                <p>Ubicación: <input type="text" class="content2--information-texto1" name="ubicacion" placeholder=" Santiago de Querétaro, Querétaro" > </p>
-              </diV>
-
-              <div class="content2--information-title2">
-                <p>Direccion de la empresa</p>
-                <hr class="line-title3">
-              </div>
-
-                    <div class="dir">
-                        <label for="#"class="content2--information-text3">Calle:<input class="celdas1" id="nombre" type="text" name="name" placeholder="      Calle de la empresa..."></label>
-
-                        <label for="#" class="content2--information-text3">Colonia:<input  class="celdas2"  type="text" name="company" placeholder="     Colonia de la empresa..." ></label>
-                        <br>
-                  </div>
-
-                    <div class="dir">
-                        <label for="#"class="content2--information-text3">Número:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Numero de la empresa..."></label>
-
-                        <label for="#" class="content2--information-text3">C.P.:<input  class="celdas2"  type="text" name="company" placeholder="     Codigo Postal de la empresa..." ></label>
-                        <br>
-                  </div>
-
-                  <div class="dir">
-                        <label for="#"class="content2--information-text3">Ciudad:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Ciudad de la empresa..."></label>
-
-                        <label for="#" class="content2--information-text3">Estado:<input  class="celdas2"  type="text" name="company" placeholder="     Estado de la empresa..." ></label>
-                        <br>
-                  </div>
-              <div class="content2--information-title3">
-                <p>Datos adicionales</p>
-                <hr class="line-title3">
-              </div>
-                    <div class="dir">
-                        <label for="#"class="content2--information-text3">Página web:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Pagina web de la empresa..."></label>
-
-                        <label for="#" class="content2--information-text3">RFC:<input  class="celdas2"  type="text" name="company" placeholder="     RFC de la empresa..." ></label>
-                  </div>
-              <div class="content2--description-title">
-                <p>Descripción de la empresa</p>
-                <hr class="line-title3">
-              </div>
-              <div >
-                <textarea class="content2--description-text" placeholder=" Nuestra compañía fue fundada en Monterrey, México, en 1906. Empezamos como una empresa local y, gracias a nuestra visión, evolucionamos hasta convertirnos en una de las compañías globales líderes en nuestra industria. Ahora contamos con el apoyo de cerca de 43 mil colaboradores en todo el mundo. Mantenemos relaciones comerciales con más de cien países y una red de operaciones con más de cincuenta naciones en la que se produce, distribuye y comercializa cemento, concreto premezclado, agregados y productos relacionados."></textarea>
-              </div>
-              <div class="content2--information-title2">
-                <p>Datos del contacto</p>
-                <hr class="line-title3">
-                <p style="font-size: 14px;">Contacto directo</p>
-              </div>
-
-                  <div class="dir">
-                        <label for="#"class="content2--information-text3">Nombre:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Nombre de la empresa..."></label>
-
-                        <label for="#" class="content2--information-text3">Area:<input  class="celdas2"  type="text" name="company" placeholder="     Area de la empresa..." ></label>
-                        <br>
-                  </div>
-                  <div class="dir">
-                        <label for="#"class="content2--information-text3">Telefono:<input class="celdas1" id="nombre" type="text" name="name" placeholder="     Telefono de la empresa..."></label>
-
-                        <label for="#" class="content2--information-text3">Email:<input  class="celdas2"  type="text" name="company" placeholder="     Email de la empresa..." ></label>
-                        <br>
-                  </div>
-
-                    <div class="dir2">
-
-                        <a class="boton-cancelar" href="#modal"><span class="content1--more_coments-text"> Cancelar </span></a>
-
-                        <a class="boton-guardar" href="#modal2"><span class="content1--more_coments-text"> Guardar </span></a>
-
+     <!--fin de la linea de separacion--> 
+     <form action="Editar-datos-empresa.php" method="post">
+         <div class="main--content">
+           <div class="content2">
+          <!--Inicio de la segunda seccion-->
+            <div class="content2--information">
+             <!--Inicio del area de la imagen-->
+             <div class="content1--img">
+               <img src="../assets/img/cemex.png" class="img--enterprise" alt="" />
+             </div>
+             <!--Fin del area de la imagen-->
+             <!--Inicio del campo editar imagen-->
+              <div class="tamano">
+             <li><img src="../assets/icons/editar-n.svg"></li>
+             <li><a class="editar" href="#">Editar/Cambiar foto</a></li>
+           </div>
+             <!--Fin del campo editar imagen-->
+               <div class="content2--information-title1">
+                 <p>Datos de la empresa</p>
+ 
+                   <hr class="line-title2">
                 </div>
-              </div>
-              </div>
-          </div>
-        </div>
+               <div class="contact">
+               <div class="content2--information-text1">
+                 <p>Nombre de la empresa  <input value="<?php echo $nombre_empresa; ?>" type="text" class="content2--information-texto1" name="nombre" placeholder=" CEMEX"></p>
+                 <p>Correo electronico <input value="<?php echo $email_empresa; ?>" type="text" class="content2--information-texto1" name="correo" placeholder=" cemex@cemex.com.mx" ></p>
+                 <p>Telefono <input value="<?php echo $telefono_empresa; ?>" type="text" class="content2--information-texto1" name="telefono" placeholder=" 442 3091600" ></p>
+                 <p>Ubicación: <input value="<?php echo $ubicacion_empresa; ?>" type="text" class="content2--information-texto1" name="ubicacion" placeholder=" Santiago de Querétaro, Querétaro" > </p>
+               </div>
+ 
+               <div class="content2--information-title2">
+                 <p>Direccion de la empresa</p>
+                 <hr class="line-title3">
+               </div>
+ 
+                     <div class="dir">
+                         <label for="#"class="content2--information-text3">Calle:<input value="<?php echo $calle; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="      Calle de la empresa..."></label>
+ 
+                         <label for="#" class="content2--information-text3">Colonia:<input value="<?php echo $colonia; ?>" class="celdas2"  type="text" name="company" placeholder="     Colonia de la empresa..." ></label>
+                         <br>
+                   </div>
+ 
+                     <div class="dir">
+                         <label for="#"class="content2--information-text3">Número:<input value="<?php echo $numero; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Numero de la empresa..."></label>
+ 
+                         <label for="#" class="content2--information-text3">C.P.:<input value="<?php echo $codigo_postal; ?>" class="celdas2"  type="text" name="company" placeholder="     Codigo Postal de la empresa..." ></label>
+                         <br>
+                   </div>
+ 
+                   <div class="dir">
+                         <label for="#"class="content2--information-text3">Ciudad:<input value="<?php echo $ciudad; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Ciudad de la empresa..."></label>
+ 
+                         <label for="#" class="content2--information-text3">Estado:<input value="<?php echo $estado; ?>" class="celdas2"  type="text" name="company" placeholder="     Estado de la empresa..." ></label>
+                         <br>
+                   </div>
+               <div class="content2--information-title3">
+                 <p>Datos adicionales</p>
+                 <hr class="line-title3">
+               </div>
+                     <div class="dir">
+                         <label for="#"class="content2--information-text3">Página web:<input value="<?php echo $pagina_web; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Pagina web de la empresa..."></label>
+ 
+                         <label for="#" class="content2--information-text3">RFC:<input value="<?php echo $rfc; ?>" class="celdas2"  type="text" name="company" placeholder="     RFC de la empresa..." ></label>
+                   </div>
+               <div class="content2--description-title">
+                 <p>Descripción de la empresa</p>
+                 <hr class="line-title3">
+               </div>
+               <div >
+                 <textarea class="content2--description-text" placeholder=" Nuestra compañía fue fundada en Monterrey, México, en 1906. Empezamos como una empresa local y, gracias a nuestra visión, evolucionamos hasta convertirnos en una de las compañías globales líderes en nuestra industria. Ahora contamos con el apoyo de cerca de 43 mil colaboradores en todo el mundo. Mantenemos relaciones comerciales con más de cien países y una red de operaciones con más de cincuenta naciones en la que se produce, distribuye y comercializa cemento, concreto premezclado, agregados y productos relacionados.">value="<?php echo $descripcion_empresa; ?>"</textarea>
+               </div>
+               <div class="content2--information-title2">
+                 <p>Datos del contacto</p>
+                 <hr class="line-title3">
+                 <p style="font-size: 14px;">Contacto directo</p>
+               </div>
+ 
+                   <div class="dir">
+                         <label for="#"class="content2--information-text3">Nombre:<input value="<?php echo $contacto_directo; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Nombre de la empresa..."></label>
+ 
+                         <label for="#" class="content2--information-text3">Area:<input value="<?php echo $area_contacto; ?>" class="celdas2"  type="text" name="company" placeholder="     Area de la empresa..." ></label>
+                         <br>
+                   </div>
+                   <div class="dir">
+                         <label for="#"class="content2--information-text3">Telefono:<input value="<?php echo $telefono_contacto; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Telefono de la empresa..."></label>
+ 
+                         <label for="#" class="content2--information-text3">Email:<input value="<?php echo $emai_contacto; ?>" class="celdas2"  type="text" name="company" placeholder="     Email de la empresa..." ></label>
+                         <br>
+                   </div>
+ 
+                     <div class="dir2">
+ 
+                         <a class="boton-cancelar" href="#modal"><span class="content1--more_coments-text"> Cancelar </span></a>
+ 
+                         <a class="boton-guardar" href="#modal2"><span class="content1--more_coments-text"> Guardar </span></a>
+ 
+                 </div>
+               </div>
+               </div>
+           </div>
+         </div>
+     </form>
       </section>
     </main>
     <footer>
