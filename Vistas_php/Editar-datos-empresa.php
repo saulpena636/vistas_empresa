@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
 
 <body>
     <header>
-      <!-- Inicio del titulo -->
+      <!--Inicio del titulo-->
         <figure>
             <img src="../assets/img/u26.png" class="header--img1" alt="" />
         </figure>
@@ -20,8 +19,9 @@
         <figure>
           <img src="../assets/img/u43.png" class="header--img2" alt="" />
         </figure>
-        <!-- Fin del titulo -->
+        <!--Fin del titulo-->
     </header>
+<center>
 <!--Inicio del menu-->
 <div class="div-menu">
     <div class="div-texto-menu"><a class="texto-menu" href="Datos-de-la-empresa.html">Datos de la Empresa</a></div>
@@ -30,24 +30,35 @@
     <div class="div-icon"><img src="../assets/img/u462.png" class="icon--profile"></div>
 </div>
 <!--Fin del menu-->
+</center>
     <main>
+      <!--Inicio de la seccion del contenido de los datos-->
       <section class="main--section">
+           <!--Inicio del titulo-->
         <div class="main--title">
           <p>Se encuentra editando los datos correspondientes a su empresa asegúrese de guardar los cambios una vez que termine</p>
         </div>
+        <!--Fin del titulo-->
+        <!--Inicio de la linea de separacion entre las dos secciones-->
         <div>
         <hr class="line-title1">
         </div>
+     <!--fin de la linea de separacion-->
         <div class="main--content">
           <div class="content2">
+         <!--Inicio de la segunda seccion-->
            <div class="content2--information">
+            <!--Inicio del area de la imagen-->
             <div class="content1--img">
               <img src="../assets/img/cemex.png" class="img--enterprise" alt="" />
             </div>
-             <div class="tamaño">
+            <!--Fin del area de la imagen-->
+            <!--Inicio del campo editar imagen-->
+             <div class="tamano">
             <li><img src="../assets/icons/editar-n.svg"></li>
             <li><a class="editar" href="#">Editar/Cambiar foto</a></li>
           </div>
+            <!--Fin del campo editar imagen-->
               <div class="content2--information-title1">
                 <p>Datos de la empresa</p>
 
