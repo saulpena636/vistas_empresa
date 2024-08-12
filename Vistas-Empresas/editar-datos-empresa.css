@@ -32,12 +32,17 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 body {
-  display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width:972px;
+  width: 100vw;
+  /* width: 1391px;
+  height: 723px; */
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 header {
@@ -46,6 +51,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 76%;
+  min-width:972px;
   height: 82px;
   text-align: center;
   background-color: var(--color-menu);
@@ -79,33 +85,11 @@ header {
 .menu {
   display: flex;
   width: 76%;
+  min-width:972px;
   height: 32px;
   background-color: #071E33;
   align-self: center;
-}
-
-.menu--icons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  align-content: space-around;
-  width: 160px;
-  height: 32px;
-}
-
-.icon--profile {
-  display: flex;
-  width: 16px;
-  height: 16px;
-
-}
-
-.icon {
-  padding: 10px 12px 0px 0px;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 600px;
+  justify-content: center;
 }
 
 main {
@@ -120,6 +104,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 76%;
+  min-width:972px;
   height: calc(100vh - 114px);
   background-color: rgba(255, 255, 255, 0.80);
 }
@@ -135,18 +120,38 @@ main {
   height: 45px;
 }
 
-li {
-  float: left;
+.div-menu {
+  display: flex;
+  margin: 0 auto;
+  width: 76%;
+  min-width:972px;
+  height: 32px;
+  background-color: #071E33;
 }
 
-ul.menu li.active {
-  background-color: #071e33;
+.div-texto-menu {
+  position: relative;
+  left: 84px;
+  margin: 0 auto;
+}
 
+.div-icon {
+  padding: 10px 0px 0px 12px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  right: 22px;
+}
+
+.icon--profile {
+  display: flex;
+  width: 16px;
+  height: 16px;
 }
 
 .texto-menu {
   display: block;
-  padding: 10px 100px 10px 100px;
+  padding: 10px 0px 10px 0px;
   text-decoration: none;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
@@ -155,7 +160,7 @@ ul.menu li.active {
   text-align: center;
   line-height: normal;
   position: relative;
-  left: 340px;
+  left: 0px;
 }
 
 .main--content {
@@ -754,8 +759,9 @@ footer {
   align-self: center;
   flex-direction: column;
   justify-content: space-around;
-  bottom: 0px;
   width: 76%;
+  min-width:972px;
+  bottom: 0px;
   height: 58px;
   background-color: rgba(242, 243, 244, 0.92);
 }
