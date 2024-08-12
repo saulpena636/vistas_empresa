@@ -8,7 +8,7 @@
 
     if($_GET){
         $id=$_GET['id'];
-        $sql="SELECT * FROM persona WHERE id=".$id;
+        $sql="SELECT * FROM empresas WHERE id=".$id;
         $listOne=$conexion->ejecutar($sql);
         $resultado=$listOne->fetchALL();
         //Datos de la empresa
@@ -21,7 +21,7 @@
         $contacto_directo=$resultado[0]['contacto_directo'];
         $area_contacto=$resultado[0]['area_contacto'];
         $telefono_contacto=$resultado[0]['telefono_contacto'];
-        $emai_contacto=$resultado[0]['emai_contacto'];
+        $email_contacto=$resultado[0]['email_contacto'];
 
         //Descripción de la empresa
         $descripcion_empresa=$resultado[0]['descripcion_empresa'];
@@ -33,7 +33,7 @@
         $codigo_postal=$resultado[0]['codigo_postal'];
         $ciudad=$resultado[0]['ciudad'];
         $estado=$resultado[0]['estado'];
-        $rfc=$resultado[0]['$rfc'];
+        $rfc=$resultado[0]['rfc'];
         $pagina_web=$resultado[0]['pagina_web'];
     }
     if($_POST){
@@ -48,7 +48,7 @@
         $contacto_directo=(isset($_POST['contacto_directo'])) ? $_POST['contacto_directo']:"";
         $area_contacto=(isset($_POST['area_contacto'])) ? $_POST['area_contacto']:"";
         $telefono_contacto=(isset($_POST['telefono_contacto'])) ? $_POST['telefono_contacto']:"";
-        $emai_contacto=(isset($_POST['email_contacto'])) ? $_POST['email_contacto']:"";
+        $email_contacto=(isset($_POST['email_contacto'])) ? $_POST['email_contacto']:"";
 
         //Descripción de la empresa
         $descripcion_empresa=(isset($_POST['descripcion_empresa'])) ? $_POST['descripcion_empresa']:"";
@@ -201,7 +201,7 @@
                    <div class="dir">
                          <label for="#"class="content2--information-text3">Telefono:<input value="<?php echo $telefono_contacto; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Telefono de la empresa..."></label>
  
-                         <label for="#" class="content2--information-text3">Email:<input value="<?php echo $emai_contacto; ?>" class="celdas2"  type="text" name="company" placeholder="     Email de la empresa..." ></label>
+                         <label for="#" class="content2--information-text3">Email:<input value="<?php echo $email_contacto; ?>" class="celdas2"  type="text" name="company" placeholder="     Email de la empresa..." ></label>
                          <br>
                    </div>
  
