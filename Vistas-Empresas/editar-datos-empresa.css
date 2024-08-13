@@ -1119,6 +1119,8 @@ footer {
 }
 
 .modal-button1-text {
+  color:#fff;
+  background-color:#a10014 ;
   position: relative;
   top: 9px;
 }

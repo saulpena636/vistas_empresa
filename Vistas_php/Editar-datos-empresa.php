@@ -285,7 +285,7 @@
         <p>¡Enhorabuena!,Cambios guardados con exito</p>
         </div>
         <div class="modal--container-buttons">
-         <a href="Datos-de-la-empresa.html" class="modal-button3"> <span class="modal-button1-text">Cerrar</span></a>
+         <a href="Datos-de-la-empresa.html" class="modal-button3"> <button type="submit" class="modal-button1-text">Cerrar</button></a>
         </div>
       </div>
     </aside>

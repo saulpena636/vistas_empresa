@@ -178,6 +178,27 @@ body {
   display: flex;
 }
 
+.btn-submit {
+  width: 200px; /* Ancho del botón */
+  height: 32px; /* Alto del botón */
+  background-color: rgba(215, 215, 215, 0.92); /* Color de fondo con transparencia */
+  font-family: 'Raleway-Light', 'Raleway', sans-serif;
+  border: none; /* Sin borde */
+  color: #000; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente */
+  text-align: center; /* Centra el texto */
+  line-height: 32px; /* Alinea verticalmente el texto dentro del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 4px; /* Opcional: Redondea las esquinas del botón */
+  transition: background-color 0.3s ease; /* Opcional: Añade una transición suave al fondo */
+}
+
+.btn-submit:hover {
+  background-color: rgba(7, 30, 51, 1); /* Cambia el color de fondo al pasar el ratón */
+  color: #fff;
+}
+
+
 #u6_div {
   border-width: 0px;
   position: absolute;
