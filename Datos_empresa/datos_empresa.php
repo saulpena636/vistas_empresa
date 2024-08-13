@@ -34,7 +34,7 @@
        $codigo_postal=$resultado[0]['codigo_postal'];
        $ciudad=$resultado[0]['ciudad'];
        $estado=$resultado[0]['estado'];
-       $rfc=$resultado[0]['$rfc'];
+       $rfc=$resultado[0]['rfc'];
        $pagina_web=$resultado[0]['pagina_web'];
    }
 ?>
@@ -573,7 +573,7 @@
         <div id="u85_text" class="text ">
             <form action="../Vistas_php/Editar-datos-empresa.php" method="get"> 
                 <input type="hidden" name="id" value="<?php echo $id ?>">
-                <input type="submit" value="Editar datos de la empresa">
+                <input type="submit" class="btn-submit" value="Editar datos de la empresa">
             </form>
         </div>
         </div>
