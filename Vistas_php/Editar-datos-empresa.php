@@ -64,9 +64,10 @@
         $pagina_web=(isset($_POST['pagina_web'])) ? $_POST['pagina_web']:"";
         
         //Actualizar
-        $sql="UPDATE persona SET nombre='".$nombre."', apellidos='".$apellidos."' WHERE id=".$id;
+        $sql="UPDATE empresas SET nombre_empresa='".$nombre_empresa."', email_empresa='".$email_empresa."', telefono_empresa='".$telefono_empresa."', ubicacion_empresa='".$ubicacion_empresa."', contacto_directo='".$contacto_directo."', area_contacto='".$area_contacto."', telefono_contacto='".$telefono_contacto."', email_contacto='".$email_contacto."', descripcion_empresa='".$descripcion_empresa."', calle='".$calle."', colonia='".$colonia."', numero='".$numero."', codigo_postal='".$codigo_postal."', ciudad='".$ciudad."', estado='".$estado."', rfc='".$rfc."', pagina_web='".$pagina_web."' WHERE id=".$id;
         $agregar=$conexion->ejecutar($sql);
-        echo "<div>Se ha actualizado correctamente a: <strong>".$nombre." ".$apellidos."</strong></div>";
+        header('Location: ../Datos_empresa/datos_empresa.php');
+        exit();
     }
 ?>
 
@@ -103,6 +104,7 @@
 </div>
 <!--Fin del menu-->
 </center>
+<form action="Editar-datos-empresa.php" class="main--content" method="post">
     <main>
       <!--Inicio de la seccion del contenido de los datos-->
       <section class="main--section">
@@ -116,7 +118,6 @@
         <hr class="line-title1">
         </div>
      <!--fin de la linea de separacion--> 
-     <form action="Editar-datos-empresa.php" class="main--content" method="post">
          <div class="cont">
            <div class="content2">
             <!--Inicio de la segunda seccion-->
@@ -139,10 +140,10 @@
                 </div>
                <div class="contact">
                <div class="content2--information-text1">
-                 <p>Nombre de la empresa  <input value="<?php echo $nombre_empresa; ?>" type="text" class="content2--information-texto1" name="nombre" placeholder=" CEMEX"></p>
-                 <p>Correo electronico <input value="<?php echo $email_empresa; ?>" type="text" class="content2--information-texto1" name="correo" placeholder=" cemex@cemex.com.mx" ></p>
-                 <p>Telefono <input value="<?php echo $telefono_empresa; ?>" type="text" class="content2--information-texto1" name="telefono" placeholder=" 442 3091600" ></p>
-                 <p>Ubicación: <input value="<?php echo $ubicacion_empresa; ?>" type="text" class="content2--information-texto1" name="ubicacion" placeholder=" Santiago de Querétaro, Querétaro" > </p>
+                 <p>Nombre de la empresa  <input value="<?php echo $nombre_empresa; ?>" type="text" class="content2--information-texto1" name="nombre_empresa" placeholder=" CEMEX"></p>
+                 <p>Correo electronico <input value="<?php echo $email_empresa; ?>" type="text" class="content2--information-texto1" name="email_empresa" placeholder=" cemex@cemex.com.mx" ></p>
+                 <p>Telefono <input value="<?php echo $telefono_empresa; ?>" type="text" class="content2--information-texto1" name="telefono_empresa" placeholder=" 442 3091600" ></p>
+                 <p>Ubicación: <input value="<?php echo $ubicacion_empresa; ?>" type="text" class="content2--information-texto1" name="ubicacion_empresa" placeholder=" Santiago de Querétaro, Querétaro" > </p>
                </div>
  
                <div class="content2--information-title2">
@@ -151,23 +152,23 @@
                </div>
  
                      <div class="dir">
-                         <label for="#"class="content2--information-text3">Calle:<input value="<?php echo $calle; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="      Calle de la empresa..."></label>
+                         <label for="#"class="content2--information-text3">Calle:<input value="<?php echo $calle; ?>" class="celdas1" id="nombre" type="text" name="calle" placeholder="      Calle de la empresa..."></label>
  
-                         <label for="#" class="content2--information-text3">Colonia:<input value="<?php echo $colonia; ?>" class="celdas2"  type="text" name="company" placeholder="     Colonia de la empresa..." ></label>
+                         <label for="#" class="content2--information-text3">Colonia:<input value="<?php echo $colonia; ?>" class="celdas2"  type="text" name="colonia" placeholder="     Colonia de la empresa..." ></label>
                          <br>
                    </div>
  
                      <div class="dir">
-                         <label for="#"class="content2--information-text3">Número:<input value="<?php echo $numero; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Numero de la empresa..."></label>
+                         <label for="#"class="content2--information-text3">Número:<input value="<?php echo $numero; ?>" class="celdas1" id="nombre" type="text" name="numero" placeholder="     Numero de la empresa..."></label>
  
-                         <label for="#" class="content2--information-text3">C.P.:<input value="<?php echo $codigo_postal; ?>" class="celdas2"  type="text" name="company" placeholder="     Codigo Postal de la empresa..." ></label>
+                         <label for="#" class="content2--information-text3">C.P.:<input value="<?php echo $codigo_postal; ?>" class="celdas2"  type="text" name="codigo_postal" placeholder="     Codigo Postal de la empresa..." ></label>
                          <br>
                    </div>
  
                    <div class="dir">
-                         <label for="#"class="content2--information-text3">Ciudad:<input value="<?php echo $ciudad; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Ciudad de la empresa..."></label>
+                         <label for="#"class="content2--information-text3">Ciudad:<input value="<?php echo $ciudad; ?>" class="celdas1" id="nombre" type="text" name="ciudad" placeholder="     Ciudad de la empresa..."></label>
  
-                         <label for="#" class="content2--information-text3">Estado:<input value="<?php echo $estado; ?>" class="celdas2"  type="text" name="company" placeholder="     Estado de la empresa..." ></label>
+                         <label for="#" class="content2--information-text3">Estado:<input value="<?php echo $estado; ?>" class="celdas2"  type="text" name="estado" placeholder="     Estado de la empresa..." ></label>
                          <br>
                    </div>
                <div class="content2--information-title3">
@@ -175,16 +176,16 @@
                  <hr class="line-title3">
                </div>
                      <div class="dir">
-                         <label for="#"class="content2--information-text3">Página web:<input value="<?php echo $pagina_web; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Pagina web de la empresa..."></label>
+                         <label for="#"class="content2--information-text3">Página web:<input value="<?php echo $pagina_web; ?>" class="celdas1" id="nombre" type="text" name="pagina_web" placeholder="     Pagina web de la empresa..."></label>
  
-                         <label for="#" class="content2--information-text3">RFC:<input value="<?php echo $rfc; ?>" class="celdas2"  type="text" name="company" placeholder="     RFC de la empresa..." ></label>
+                         <label for="#" class="content2--information-text3">RFC:<input value="<?php echo $rfc; ?>" class="celdas2"  type="text" name="rfc" placeholder="     RFC de la empresa..." ></label>
                    </div>
                <div class="content2--description-title">
                  <p>Descripción de la empresa</p>
                  <hr class="line-title3">
                </div>
                <div >
-                 <textarea class="content2--description-text" placeholder=" Nuestra compañía fue fundada en Monterrey, México, en 1906. Empezamos como una empresa local y, gracias a nuestra visión, evolucionamos hasta convertirnos en una de las compañías globales líderes en nuestra industria. Ahora contamos con el apoyo de cerca de 43 mil colaboradores en todo el mundo. Mantenemos relaciones comerciales con más de cien países y una red de operaciones con más de cincuenta naciones en la que se produce, distribuye y comercializa cemento, concreto premezclado, agregados y productos relacionados.">value="<?php echo $descripcion_empresa; ?>"</textarea>
+                 <textarea name="descripcion_empresa" class="content2--description-text" placeholder="Descripción de la empresa..."><?php echo $descripcion_empresa; ?></textarea>
                </div>
                <div class="content2--information-title2">
                  <p>Datos del contacto</p>
@@ -193,15 +194,15 @@
                </div>
  
                    <div class="dir">
-                         <label for="#"class="content2--information-text3">Nombre:<input value="<?php echo $contacto_directo; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Nombre de la empresa..."></label>
+                         <label for="#"class="content2--information-text3">Nombre:<input value="<?php echo $contacto_directo; ?>" class="celdas1" id="nombre" type="text" name="contacto_directo" placeholder="     Nombre de la empresa..."></label>
  
-                         <label for="#" class="content2--information-text3">Area:<input value="<?php echo $area_contacto; ?>" class="celdas2"  type="text" name="company" placeholder="     Area de la empresa..." ></label>
+                         <label for="#" class="content2--information-text3">Area:<input value="<?php echo $area_contacto; ?>" class="celdas2"  type="text" name="area_contacto" placeholder="     Area de la empresa..." ></label>
                          <br>
                    </div>
                    <div class="dir">
-                         <label for="#"class="content2--information-text3">Telefono:<input value="<?php echo $telefono_contacto; ?>" class="celdas1" id="nombre" type="text" name="name" placeholder="     Telefono de la empresa..."></label>
+                         <label for="#"class="content2--information-text3">Telefono:<input value="<?php echo $telefono_contacto; ?>" class="celdas1" id="nombre" type="text" name="telefono_contacto" placeholder="     Telefono de la empresa..."></label>
  
-                         <label for="#" class="content2--information-text3">Email:<input value="<?php echo $email_contacto; ?>" class="celdas2"  type="text" name="company" placeholder="     Email de la empresa..." ></label>
+                         <label for="#" class="content2--information-text3">Email:<input value="<?php echo $email_contacto; ?>" class="celdas2"  type="text" name="email_contacto" placeholder="     Email de la empresa..." ></label>
                          <br>
                    </div>
  
@@ -216,19 +217,18 @@
                </div>
            </div>
          </div>
-     </form>
-      </section>
+        </section>
     </main>
     <footer>
-      <div class="footer--div1-img">
-      <img src="../assets/img/u26.png" class="footer-img1"  alt="">
-      </div>
-      <div class="footer--titleT1">
-        <div class="footer--title1">
+        <div class="footer--div1-img">
+            <img src="../assets/img/u26.png" class="footer-img1"  alt="">
+        </div>
+        <div class="footer--titleT1">
+            <div class="footer--title1">
           <p>Sobre SUNEO</p>
         </div>
         <div class="footer--title1">
-          <p>Aviso de Privacidad</p>
+            <p>Aviso de Privacidad</p>
         </div>
         <div class="footer--title1">
           <p>Empresas</p>
@@ -236,7 +236,7 @@
         <div class="footer--title1">
           <p>Ayuda</p>
         </div>
-      </div>
+    </div>
       <div class="footer--text">
         <div class="footer--textT1">
         <div class="footer--text1">
@@ -248,46 +248,48 @@
       </div>
       <div class="footer--textT2">
         <div class="footer--text1">
-          <p>
-            Teléfonos: (953) 53 203 99 o (953) 53 202 14 ext. 113 o 116
+            <p>
+                Teléfonos: (953) 53 203 99 o (953) 53 202 14 ext. 113 o 116
           </p>
         </div>
         <div class="footer--text1">
           <p>
-            Carretera a Acatlima Km. 2.5 Huajuapan de León, Oaxaca, México C.P
+              Carretera a Acatlima Km. 2.5 Huajuapan de León, Oaxaca, México C.P
             69000
           </p>
         </div>
       </div>
       </div>
     </footer>
-        <aside id="modal" class="modal--container">
-      <div class="content-modal">
-        <div class="modal--title">
+    <aside id="modal" class="modal--container">
+        <div class="content-modal">
+            <div class="modal--title">
           <p>Mensaje</p>
         </div>
         <div class="container-text1">
         <p>¿Desea guardar los cambios realizados antes de salir?</p>
         </div>
         <div class="modal--container-buttons">
-           <a href="Datos-de-la-empresa.html" class="modal-button2"> <span class="modal-button1-text">Cerrar</span></a>
+            <a href="../Datos_empresa/datos_empresa.php" class="modal-button2"> <span class="modal-button1-text">Cerrar</span></a>
          <a href="#modal2" class="modal-button1"> <button type="submit" class="modal-button1-text">Guardar</button></a>
-
+         
         </div>
       </div>
     </aside>
     <aside id="modal2" class="modal--container">
-      <div class="content-modal">
-        <div class="modal--title">
-          <p>Mensaje</p>
+        <div class="content-modal">
+            <div class="modal--title">
+                <p>Mensaje</p>
+            </div>
+            <div class="container-text2">
+                <p>¡Enhorabuena!,Cambios guardados con exito</p>
+            </div>
+            <div class="modal--container-buttons">
+                <input type="hidden" name="id" value="<?php echo $id ?>">
+                <a href="" class="modal-button3"><button type="submit" class="modal-button1-text">Cerrar</button></a>
+            </div>
         </div>
-        <div class="container-text2">
-        <p>¡Enhorabuena!,Cambios guardados con exito</p>
-        </div>
-        <div class="modal--container-buttons">
-         <a href="Datos-de-la-empresa.html" class="modal-button3"> <span class="modal-button1-text">Cerrar</span></a>
-        </div>
-      </div>
     </aside>
+</form>
 </body>
 </html>
