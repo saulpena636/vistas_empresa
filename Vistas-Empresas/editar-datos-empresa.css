@@ -170,10 +170,11 @@ main {
 .main--content {
   display: flex;
   position: relative;
-  width: calc(100% - 21px);
+  min-width: 978px;
+  width: 76%;
   height: calc(100% - 134px);
-  left: 10px;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .content1 {
